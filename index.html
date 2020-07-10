@@ -5,19 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <!-- Simple bar -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"/>
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Own css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/queries.css">
 </head>
 <body>
     <nav class="menu side-bar">
-        <div id="plus" class="menu__item">
+        <div id="up" class="menu__item">
             <ion-icon name="arrow-up-outline"></ion-icon>
         </div>
 
-        <div id="minus" class="menu__item">
+        <div id="down" class="menu__item">
             <ion-icon name="arrow-down-outline"></ion-icon> 
-        </div>
+        </div>         
     </nav>
 
     <nav class="menu bottom-bar">
@@ -44,15 +49,13 @@
         <div class="container">
             <h2 class="projects__title">Projetos</h2>
         </div>
-
         
-        <div data-simplebar  class="projects__collection" >
+        <div id="items" class="projects__collection">
             <div class="projects__item"></div>
             <div class="projects__item"></div>
             <div class="projects__item"></div>
             <div class="projects__item"></div>
-        </div>
-        
+        </div>      
     </section>
 
     <section id="section3" class="contact">
