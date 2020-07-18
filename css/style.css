@@ -29,9 +29,8 @@ h1 {
 h2 { font-size: 4rem;}
 
 /* REUSABLE CLASSES  */
-.blue-text {
-    color: blue;
-}
+.blue-text { color: blue; }
+.var { color: rgb(132, 42, 216); }
 
 .container {
     max-width: 1200px;
@@ -128,14 +127,28 @@ h2 { font-size: 4rem;}
     width: 100%;
     padding: 3rem;
     white-space: nowrap;
+    z-index: 10;
 }
 
+.projects__collection:hover {
+    cursor: grabbing;
+}
+
+/* .projects__collection:hover {
+    cursor: grabbing;
+} */
+ 
 .projects__item {
     display: inline-block;
-    width: 400px;
-    height: 350px;
-    background-color: red;
+    width: 600px;
     margin: 0 50px;
+    transform: scale(1);
+    transition: all 1s;
+    
+}
+
+.projects__item img{
+    width: 100%;
 }
 
 .projects__item:last-of-type{
@@ -145,11 +158,44 @@ h2 { font-size: 4rem;}
     margin-left: calc(50vw - 200px);
 }
 
+
 .projects__item:hover{
     transform: scale(1.1);
-    transition: all 0.8s;
+    box-shadow: 0 5px -50px rgb(0, 255, 136);
+    
+    /* transition: all 0.8s; */
+}
+
+.dark {
+    width: 100%;
+    height: inherit;
+    background-color: rgba(221, 39, 39, 0.8);
 }
 
 .simplebar-scrollbar::before {
     background: transparent;
+}
+
+/* SKILLS */
+.skills h2 { margin-bottom: 8rem; }
+
+.skills__box {
+    letter-spacing: 2px;
+    display: flex;
+    margin-bottom: 8rem;
+    font-size: 3rem;
+}
+
+.skills__box p:first-of-type { flex-shrink: 0; }
+
+.skills__arr {
+    color: rgb(113, 197, 141);
+    font-size: 2rem;
+}
+
+.skills__arr span {
+    color: white;
+    font-size: 4rem;
+    line-height: .9;
+    vertical-align: middle;
 }

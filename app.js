@@ -1,18 +1,18 @@
 // Up/down navigation
-$('html, body').animate({scrollTop: $('#section1').offset().top}, 1000);
+// $('html, body').animate({scrollTop: $('#section1').offset().top}, 1000);
 
 const up = $('#up');
 const down = $('#down');
 let count = 1;
 
-down.click(function(){
+down.click(() => {
     if ( count < 4){
         count++;
         $('html, body').animate({scrollTop: $('#section' + count).offset().top}, 1000);
     }
 });
 
-up.click(function(){
+up.click(() => {
     if ( count > 1){
         count--;
         $('html, body').animate({scrollTop: $('#section' + count).offset().top}, 1000);
@@ -50,3 +50,10 @@ slider.addEventListener('mousemove',(e) => {
     // console.log({startX,x, walk}); 
 })
 
+const links = $('a');
+
+links.click(e => {
+    e.preventDefault();
+    console.log(e);
+});
+console.log(links);
