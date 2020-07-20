@@ -14,6 +14,7 @@ body {
     font-family: 'Orbitron', sans-serif;
     color: #fff;
     overflow: hidden;
+    letter-spacing: 2px;
 }
 
 section {
@@ -22,41 +23,20 @@ section {
 }
 
 /* titles */
-h1 {
-    font-size: 6rem;
-}
+h1 { font-size: 6rem; }
+h2 { font-size: 4rem; }
+h3 { font-size: 3.5rem;}
 
-h2 { font-size: 4rem;}
 
 /* REUSABLE CLASSES  */
-.blue-text { color: blue; }
+/* .blue-text { color: blue; } */
 .var { color: rgb(132, 42, 216); }
+.string { color: rgb(113, 197, 141); }
 
 .container {
     max-width: 1200px;
     padding: 7rem 3%;
     margin: 0 auto;
-}
-
-/* SIDE-BAR */
-.side-bar {
-    position: fixed;
-    right: calc((100vw - 1200px) / 2);
-    padding: 7rem 0;
-    padding-right: 3%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.bottom-bar {
-    position: fixed;
-    left: calc((100vw - 1200px) / 2);
-    bottom: 0;
-    padding-bottom: 7rem;
-    padding-left: 3%;
 }
 
 .menu__item {
@@ -93,6 +73,28 @@ h2 { font-size: 4rem;}
 .menu__item:hover { color: #000; }
 .menu__item:hover::before { background-color: #fff;}
 
+/* SIDE-BAR */
+.side-bar {
+    position: fixed;
+    right: calc((100vw - 1200px) / 2);
+    padding: 7rem 0;
+    padding-right: 3%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.bottom-bar {
+    position: fixed;
+    left: calc((100vw - 1200px) / 2);
+    bottom: 0;
+    padding-bottom: 7rem;
+    padding-left: 3%;
+}
+
 .bottom-bar {
     display: flex;
     align-items: center;
@@ -123,58 +125,77 @@ h2 { font-size: 4rem;}
 }
 
 /* PROJECTS */
+.projects .container {
+    padding-bottom: 0;
+}
+
+.wrapper {
+    margin-top: 1.46rem;
+    height: calc(100vh - 27rem);
+    display: flex;
+    align-items: center;
+}
+
 .projects__collection {
-    width: 100%;
-    padding: 3rem;
+    width: 100vw;
     white-space: nowrap;
-    z-index: 10;
 }
 
-.projects__collection:hover {
-    cursor: grabbing;
-}
-
-/* .projects__collection:hover {
-    cursor: grabbing;
-} */
+.projects__collection:hover { cursor: grabbing;}
  
 .projects__item {
     display: inline-block;
-    width: 600px;
-    margin: 0 50px;
-    transform: scale(1);
+    width: 100vw;
+    max-width: 800px;
+    transform: scale(0.9);
     transition: all 1s;
-    
+}
+
+.projects__item:first-of-type {
+    margin-left: calc(50vw - 25vw);
 }
 
 .projects__item img{
     width: 100%;
 }
 
-.projects__item:last-of-type{
-    margin-right: calc(50vw - 200px) ;
-}
-.projects__item:first-of-type{
-    margin-left: calc(50vw - 200px);
-}
-
-
-.projects__item:hover{
-    transform: scale(1.1);
-    box-shadow: 0 5px -50px rgb(0, 255, 136);
-    
-    /* transition: all 0.8s; */
+.projects__links {
+    margin-top: -3px;
+    display: flex;
+    /* border: 2px solid #fff; */
 }
 
-.dark {
-    width: 100%;
-    height: inherit;
-    background-color: rgba(221, 39, 39, 0.8);
+.projects__btn:link,
+.projects__btn:visited {
+    text-decoration: none;
+    border: 2px solid rgb(113, 197, 141);
+    background-color: rgb(113, 197, 141);
+    padding: .5rem 0;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    color: #000;
+    transition: all .8s;
 }
 
-.simplebar-scrollbar::before {
-    background: transparent;
+.projects__btn:link:hover,
+.projects__btn:visited:hover {
+    /* border: 2px solid #000; */
+    background-color: #000;
+    color: #fff ;
 }
+
+.projects__btn p {
+    margin-left: 10px;
+    font-size: 2rem;
+}
+
+.projects__btn--full:link,
+.projects__btn--full:visited { width: 100%; }
+
+.simplebar-scrollbar::before { background: transparent; }
 
 /* SKILLS */
 .skills h2 { margin-bottom: 8rem; }
@@ -198,4 +219,39 @@ h2 { font-size: 4rem;}
     font-size: 4rem;
     line-height: .9;
     vertical-align: middle;
+}
+
+/* CONTACT */
+.contact .container { 
+    position: relative;
+    height: 100%;
+}
+
+.contact__box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.contact__box h3 {
+    margin-bottom: 3rem;
+}
+
+.contact__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+
+.contact__row p {
+    margin-left: 10px;
+    font-size: 2.5rem;
+}
+
+.contact__link:link,
+.contact__link:visited {
+    color: #fff;
 }

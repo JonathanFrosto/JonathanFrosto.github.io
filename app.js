@@ -50,10 +50,3 @@ slider.addEventListener('mousemove',(e) => {
     // console.log({startX,x, walk}); 
 })
 
-const links = $('a');
-
-links.click(e => {
-    e.preventDefault();
-    console.log(e);
-});
-console.log(links);
