@@ -93,6 +93,7 @@ h3 { font-size: 3.5rem;}
     bottom: 0;
     padding-bottom: 7rem;
     padding-left: 3%;
+    z-index: 99;
 }
 
 .bottom-bar {
@@ -201,7 +202,6 @@ h3 { font-size: 3.5rem;}
 .skills h2 { margin-bottom: 8rem; }
 
 .skills__box {
-    letter-spacing: 2px;
     display: flex;
     margin-bottom: 8rem;
     font-size: 3rem;
