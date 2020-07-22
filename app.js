@@ -3,6 +3,7 @@ $('html, body').animate({scrollTop: $('#section1').offset().top}, 1000);
 
 const up = $('#up');
 const down = $('#down');
+const mobile = $('#menu-mobile');
 const menuDescription = $('.menu__description');
 let count = 1;
 
@@ -83,4 +84,29 @@ slider.addEventListener('mousemove',(e) => {
     // console.log({startX,x, walk}); 
 })
 
-//
+// menu-mobile
+let active = false;
+const menuMobile = $('.js-menu__mobile');
+
+mobile.click(() => {
+    if ( active == false ){
+        menuMobile.css('display','flex');
+        active = true;
+    }
+    else{
+        menuMobile.css('display','none');
+        active = false;
+    }
+});
+
+$('a[href*="#"]:not([href="#"]').on('click', function(event){     
+    event.preventDefault();
+
+    menuMobile.css('display','none');
+    active = false;
+
+    count = Number((this.hash).slice(-1));
+    setTimeout(isVisible,1000);
+    setTimeout(getDescription,1000);
+    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 1000);
+});
