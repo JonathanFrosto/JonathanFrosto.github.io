@@ -87,14 +87,17 @@ slider.addEventListener('mousemove',(e) => {
 // menu-mobile
 let active = false;
 const menuMobile = $('.js-menu__mobile');
+const menuIcon = $('.menu__icon');
 
 mobile.click(() => {
     if ( active == false ){
         menuMobile.css('display','flex');
+        menuIcon.attr("name","close");
         active = true;
     }
     else{
         menuMobile.css('display','none');
+        menuIcon.attr("name","menu-outline");
         active = false;
     }
 });
