@@ -35,7 +35,8 @@
 
     .projects__item:first-of-type { margin-left: 0;}
     .projects__item:last-of-type { margin-right: 0; }
-
+    .projects__how { padding-bottom: 5rem; }
+    
     .contact__box {
         position: static;
         transform: translate(0,0);
@@ -46,6 +47,8 @@
 }
 
 @media only screen and (max-width: 768px){
+    html { font-size: 56.25%; }
+
     .home .container {
         flex-direction: column;
         text-align: center;

@@ -26,7 +26,8 @@ section {
 /* titles */
 h1 { font-size: 6rem; }
 h2 { font-size: 4rem; }
-h3 { font-size: 3.5rem;}
+h3 { font-size: 3.5rem; }
+h4 { font-size: 2.5rem; }
 
 /* links */
 a:link,
@@ -256,17 +257,33 @@ a:visited { text-decoration: none; }
 
 .projects__how {
     width: 100%;
-    height: 64px;
+    /* height: 64px; */
     max-width: 1200px;
     margin: 0 auto;
     
-    /* text-align: center; */
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.projects__how h3 {
+@keyframes mouseSlider{
+    0% {
+        transform: translateX(50px);
+    }
+    100% {
+        transform: translateX(-50px);
+    }
+}
+
+.projects__how i {
+    animation-name: mouseSlider;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.projects__how h4 {
+    margin-top: 15px;
     font-weight: 400;
 }
 
@@ -329,3 +346,17 @@ a:visited { text-decoration: none; }
     color: #fff;
 }
 
+ion-icon[name="mail"]:hover{ 
+    transition: color .8s;
+    color: #dd4b39; 
+}
+
+ion-icon[name="logo-github"]:hover{ 
+    transition: color .8s;
+    color: #71c58d; 
+}
+
+ion-icon[name="logo-linkedin"]:hover{ 
+    transition: color .8s;
+    color: #3b5998; 
+}
