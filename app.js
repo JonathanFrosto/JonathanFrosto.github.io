@@ -1,5 +1,8 @@
 // Up/down navigation
-$('html, body').animate({scrollTop: $('#section1').offset().top}, 1000);
+const width = $(window).width();
+if ( width > 1024){
+    $('html, body').animate({scrollTop: $('#section1').offset().top}, 1000);
+}
 
 const up = $('#up');
 const down = $('#down');
