@@ -1,7 +1,7 @@
 # Portfólio
 Portfólio criado com um intuito de mostrar meus projetos e habilidades
 
-técnologias utilizadas:
+tecnologias utilizadas:
 - HTML
 - CSS
 - Javascript
