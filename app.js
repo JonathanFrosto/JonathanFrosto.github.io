@@ -108,6 +108,8 @@ mobile.click(() => {
 $('a[href*="#"]:not([href="#"]').on('click', function(event){     
     event.preventDefault();
 
+    menuIcon.attr("name","menu-outline");
+
     menuMobile.css('display','none');
     active = false;
 
