@@ -7,6 +7,6 @@ tecnologias utilizadas:
 - Javascript
 - Jquery
 
-### link: https://jonathanfrosto.github.io/
+### link: https://jonathanfrosto.github.io/Portfolio
 
 ![Site](https://i.imgur.com/bimg74V.png "Site")
