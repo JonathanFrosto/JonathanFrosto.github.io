@@ -62,6 +62,23 @@
     .projects__item { width: 80vw; }
 }
 
-@media only screen and (max-width: 360px){
-    html { font-size: 31.75%; }
+@media only screen and (max-width: 500px){
+    html { font-size: 37%; }
+
+    .menu__item--hr::before,
+    .menu__item::before {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+
+    .menu__item--hr,
+    .menu__item {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+
+    .projects__btn p {
+        margin-left: 5px;
+    }
+
 }

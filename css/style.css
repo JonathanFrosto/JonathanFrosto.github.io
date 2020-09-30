@@ -82,12 +82,14 @@ a:visited { text-decoration: none; }
     justify-content: center;
     align-items: center;
     
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     background-color: #fff;
     color: #fff;
     cursor: pointer;
     z-index: 99;
 }
+
+i {z-index: 2;}
 
 .menu__item--hr::before {
     content: "";
@@ -346,17 +348,17 @@ a:visited { text-decoration: none; }
     color: #fff;
 }
 
-ion-icon[name="mail"]:hover{ 
+.fa-at:hover{ 
     transition: color .8s;
     color: #dd4b39; 
 }
 
-ion-icon[name="logo-github"]:hover{ 
+.fa-github:hover{ 
     transition: color .8s;
     color: #71c58d; 
 }
 
-ion-icon[name="logo-linkedin"]:hover{ 
+.fa-linkedin:hover{ 
     transition: color .8s;
     color: #3b5998; 
 }
